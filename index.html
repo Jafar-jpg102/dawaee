@@ -237,8 +237,8 @@ body.dark .item-link {
 </div>
 
 <script>
-// مفتاح الـ OpenRouter المفعّل والشغال مية بالمية مالتك
-const apiKey = "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";
+// المفتاح الجديد مالتك تم وضعه هنا بنجاح
+const apiKey = "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";
 
 let currentDrug = "";
 let currentLang = "ar";
@@ -362,7 +362,7 @@ async function searchWithAI() {
     
     const body = {
         model: "google/gemini-2.5-flash",
-        max_tokens: 1000, // مصلّح ومحدّد لعدم حدوث خطأ الـ Credit والـ Token
+        max_tokens: 1000,
         messages: [
             { role: "system", content: systemInstruction },
             { role: "user", content: `المريض يبحث عن: "${query}"` }
@@ -382,7 +382,7 @@ async function analyzeImageWithAI() {
         const base64Data = reader.result.split(",")[1];
         const body = {
             model: "google/gemini-2.5-flash",
-            max_tokens: 1000, // مصلّح ومحدّد لعدم حدوث خطأ الـ Credit والـ Token
+            max_tokens: 1000,
             messages: [
                 { role: "system", content: systemInstruction },
                 { 
@@ -454,4 +454,5 @@ function shareDrug() {
 document.addEventListener("click", function(e) { if (e.target.id !== "search") document.getElementById("suggestions").style.display = "none"; });
 </script>
 </body>
-</html>
+    </html>
+        
